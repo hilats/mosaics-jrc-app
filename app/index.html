@@ -1,0 +1,102 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Mosaics Viewer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/videojs/dist/video-js/video-js.css" />
+    <link rel="stylesheet" href="bower_components/video.js/dist/video-js/video-js.css" />
+    <link rel="stylesheet" href="bower_components/fragmentsviz/app/styles/fragmentsviz.css" />
+    <link rel="stylesheet" href="bower_components/fragmentsviz/app/styles/include.css" />
+    <link rel="stylesheet" href="bower_components/ng-mosaics/app/styles/main.css" />
+    <link rel="stylesheet" href="bower_components/codemirror/lib/codemirror.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="libs/fragviz_include/scripts/extlibs/sausage/sausage.css" />
+    <link rel="stylesheet" href="libs/fragviz_include/styles/include.css" />
+
+    <link rel="stylesheet" href="libs/openlayers2/theme/default/style.css"  type="text/css">
+    <link rel="stylesheet" href="libs/pdfjs-dist/web/pdf_viewer.css" />
+
+    <!-- build:css(.tmp) styles/main.css -->
+    <!-- endbuild -->
+  </head>
+  <body ng-app="mosaicsAppApp" ng-controller="SamplesCtrl as samplesCtrl">
+
+    <!-- Add your site or application content here -->
+    <div class="container">
+      <top-menu></top-menu>
+
+      <div ui-view=""></div>
+
+    </div>
+
+
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- TODO make sure bootstrap comes after jquery-ui to have right version of tooltip -->
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/satellizer/satellizer.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/MediaFragmentsURI/mediafragments.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/videojs/dist/video-js/video.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/video.js/dist/video-js/video.js"></script>
+    <script src="bower_components/videojs-youtube/dist/vjs.youtube.js"></script>
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/openlayers2/OpenLayers.js"></script>
+    <script src="bower_components/ol-helpers/EsriGeoJSON.js"></script>
+    <script src="bower_components/ol-helpers/ol-helpers.js"></script>
+    <script src="bower_components/videojs-vimeo/vjs.vimeo.js"></script>
+    <script src="bower_components/pdfjs-dist/build/pdf.js"></script>
+    <script src="bower_components/pdfjs-dist/build/pdf.worker.js"></script>
+    <script src="bower_components/videojs-soundcloud/dist/media.soundcloud.js"></script>
+    <script src="bower_components/videojs-soundcloud/dist/media.soundcloud.dev.js"></script>
+    <script src="bower_components/videojs-soundcloud/dist/media.soundcloud.min.js"></script>
+    <script src="bower_components/fragmentsviz/app/scripts/d3graphs.js"></script>
+    <script src="bower_components/fragmentsviz/app/scripts/utils.js"></script>
+    <script src="bower_components/fragmentsviz/app/scripts/frag-codecs.js"></script>
+    <script src="bower_components/fragmentsviz/app/scripts/viewers.js"></script>
+    <script src="bower_components/ng-mosaics/app/scripts/app.js"></script>
+    <script src="bower_components/ng-mosaics/app/scripts/controllers/main.js"></script>
+    <script src="bower_components/ng-mosaics/app/scripts/controllers/mosaics.js"></script>
+    <script src="bower_components/ng-mosaics/app/scripts/controllers/sparql.js"></script>
+    <script src="bower_components/ng-mosaics/app/scripts/services/mosaics.js"></script>
+    <script src="bower_components/codemirror/lib/codemirror.js"></script>
+    <script src="bower_components/angular-ui-codemirror/ui-codemirror.js"></script>
+    <!-- endbower -->
+    <script src="bower_components/codemirror/mode/sparql/sparql.js"></script>
+    <script src="bower_components/codemirror/mode/javascript/javascript.js"></script>
+    <script src="bower_components/fragmentsviz/app/scripts/extlibs/sausage/jquery.sausage.js"></script>
+    <!-- endbuild -->
+
+    <script src="libs/pdfjs-dist/web/pdf_viewer.js"></script>
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <!-- endbuild -->
+</body>
+</html>

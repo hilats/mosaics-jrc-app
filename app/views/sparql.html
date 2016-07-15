@@ -1,0 +1,16 @@
+<div >
+
+    <div style="position:relative">
+    <button class="btn btn-primary" style="float:right; margin-right:1em; margin-top: 1em" ng-click="sendQuery()">query</button>
+    <ui-codemirror id="sparqlEditor" ui-codemirror-opts="editorOptions" ng-model="query"></ui-codemirror>
+    </div>
+
+    <div style="position:relative">
+        <div class="btn-group" style="position:absolute; right:1em; top: 1em; z-index: 3">
+            <label class="btn btn-primary" ng-model="format" btn-radio="'rdf'">RDF</label>
+            <label class="btn btn-primary" ng-model="format" btn-radio="'ttl'">Turtle</label>
+            <label class="btn btn-primary" ng-model="format" btn-radio="'jsonld'">JSON-LD</label>
+        </div>
+        <ui-codemirror id="resultEditor" ui-codemirror-opts="editorOptions" ng-model="result"></ui-codemirror>
+    </div>
+</div>
