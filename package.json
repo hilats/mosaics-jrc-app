@@ -33,7 +33,9 @@
     "grunt-karma": "^0.8.3",
     "grunt-connect-proxy": "^0.2.0",
     "karma-jasmine": "^0.1.5",
-    "karma-phantomjs-launcher": "^0.1.4"
+    "karma-phantomjs-launcher": "^0.1.4",
+      "bower": "~1.7",
+      "grunt-bower-task": "yatskevich/grunt-bower-task#devel"
   },
   "engines": {
     "node": ">=0.10.0"
