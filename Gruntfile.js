@@ -27,6 +27,13 @@ module.exports = function (grunt) {
     // Project settings
     yeoman: appConfig,
 
+      bower : {install: {
+          options: {
+              verbose: true,
+              //cleanup: true,
+          }
+      }},
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
         /* Disable wiredep automation
