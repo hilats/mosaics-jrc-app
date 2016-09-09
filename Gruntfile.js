@@ -447,6 +447,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+      'bower:install',
     /* 'wiredep', Disable wiredep automation because script injection is customized */
     'useminPrepare',
     'concurrent:dist',
@@ -463,7 +464,6 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'bower:install',
     'newer:jshint',
     'test',
     'build'
