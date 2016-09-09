@@ -463,6 +463,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
+    'bower:install',
     'newer:jshint',
     'test',
     'build'
