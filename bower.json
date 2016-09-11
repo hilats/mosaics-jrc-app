@@ -24,5 +24,8 @@
         "node",
         "node_modules"
     ],
-  "appPath": "app"
+  "appPath": "app",
+    "resolutions": {
+        "video.js": "^4.11"
+    }
 }
