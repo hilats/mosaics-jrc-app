@@ -15,7 +15,7 @@
     "angular-bootstrap": "~0.13.0",
     "satellizer": "~0.13.4",
     "angular-ui-router": "~0.2.18",
-    "ng-mosaics": "~1.0.0" ,
+    "ng-mosaics": "https://bitbucket.org/highlatitudes/mosaics-app.git" ,
     "angular-ui-codemirror": "bower"
   },
     "ignore": [
