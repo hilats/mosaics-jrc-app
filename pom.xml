@@ -88,6 +88,21 @@
                         </configuration>
                     </execution>
 
+
+                    <execution>
+                        <id>grunt clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>grunt</goal>
+                        </goals>
+
+                        <configuration>
+                            <arguments>bower:clean</arguments>
+                        </configuration>
+
+                    </execution>
+
+
                     <execution>
                         <id>grunt build</id>
                         <goals>
