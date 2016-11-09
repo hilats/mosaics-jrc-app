@@ -1,6 +1,7 @@
 <cell mosaics mosaic mosaic-var="selected">
     <div style="display: table; height: 100%"><row>
     <div class="slidein panel left">
+        <h3 style="height:32px"><!-- vertical padding--></h3>
     <div style="position: absolute">
         <div id="mosaicList" class="subpanel">
             <ul class="nav nav-tabs panel_header">
@@ -43,7 +44,7 @@
             -->
 
             <div class="panel_content" >
-                <div ng-repeat="annot in annotationsFromMap[selectedRes['moz:url']]">
+                    <div ng-repeat="annot in annotationsFromMap[selectedRes['source']]">
                     <span ng-click="gotoAnnotation(annot)">{{annot['dc:title']}}</span>
                     <span class="action glyphicon glyphicon-trash" ng-click="deleteResource(res)"></span>
                 </div>
@@ -73,7 +74,7 @@
                     </div>
                 </div>
                 <span ng-if="selectedRes">
-                    <a title="Open original resource" class="action glyphicon glyphicon-share" ng-href="selectedRes['moz:url']"></a> |
+                    <a title="Open original resource" class="action glyphicon glyphicon-share" ng-href="selectedRes['source']"></a> |
                 </span>
                 <span title="Edit mosaic" class="action glyphicon glyphicon-edit" ng-click="toggleEdit()"></span>
                 <span ng-show="selected.$dirty" class="action glyphicon glyphicon-floppy-save" ng-click="saveMosaic(selected)"></span>

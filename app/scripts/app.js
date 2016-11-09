@@ -10,6 +10,9 @@
  */
 
 (function() {
+
+    var authProvider = null
+
     var app = angular
         .module('mosaicsAppApp', [
             'ngAnimate',
@@ -70,8 +73,7 @@
                     controller: 'SparqlCtrl'
                 })
 
-
-            //TODO $authProvider.google
+            authProvider = $authProvider
         })
 
         .factory('AppState', function() {
@@ -80,7 +82,32 @@
             };
         })
 
-        .run(function($auth, $rootScope, Authentication) {
+        .run(function($auth, $rootScope, Authentication, $http) {
+
+            $http.get('/api/auth/providers.json')
+                .then(function(res) {
+                    var providersConfig = res.data;
+                    angular.forEach(providersConfig, function (conf, providerName) {
+                        var providerFunc = authProvider[providerName];
+                        if (!providerFunc)
+                            throw "OAuth provider not found " + providerName
+                        providerFunc({
+                            clientId: conf.client_id,
+                            url: '/api/auth/' + providerName
+                            //authorizationEndpoint: 'https://accounts.google.com/o/oauth2/auth',
+                            //redirectUri: window.location.origin,
+                            //requiredUrlParams: ['scope'],
+                            //optionalUrlParams: ['display'],
+                            //scope: ['profile', 'email'],
+                            //scopePrefix: 'openid',
+                            //scopeDelimiter: ' ',
+                            //display: 'popup',
+                            //type: '2.0',
+                            //popupOptions: { width: 452, height: 633 }
+                        })
+                    })
+                })
+
             $rootScope.auth = $auth
             $rootScope.$watch("auth.isAuthenticated()", function(isAuthenticated) {
                 $rootScope.currentUser = isAuthenticated && Authentication.get()
