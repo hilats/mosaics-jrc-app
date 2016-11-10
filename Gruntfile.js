@@ -372,9 +372,9 @@ module.exports = function (grunt) {
         /* copy pdf worker as is for explicit inclusion (see app.js) */
         {
             expand: true,
-            cwd: '.tmp/libs',
+            cwd: '.tmp',
             src: '**',
-            dest: '<%= yeoman.dist %>/libs'
+            dest: '<%= yeoman.dist %>'
         }]
       },
       styles: {
@@ -395,6 +395,12 @@ module.exports = function (grunt) {
             cwd: 'bower_components/fragmentsviz/app',
             src: ['styles/include.css', 'scripts/extlibs/sausage/sausage.css'],
             dest: '.tmp/libs/fragviz_include'
+        },
+        mosaics_webfonts: {
+            expand: true,
+            cwd: 'bower_components/ng-mosaics/app/styles',
+            src: ['webfonts/**'],
+            dest: '.tmp/styles'
         }
     },
 
@@ -403,17 +409,20 @@ module.exports = function (grunt) {
       server: [
         'copy:styles',
         'copy:mintlibs',
-        'copy:fragviz_include'
+        'copy:fragviz_include',
+          'copy:mosaics_webfonts'
       ],
       test: [
         'copy:styles',
         'copy:mintlibs',
-        'copy:fragviz_include'
+        'copy:fragviz_include',
+          'copy:mosaics_webfonts'
       ],
       dist: [
         'copy:styles',
         'copy:mintlibs',
         'copy:fragviz_include',
+          'copy:mosaics_webfonts',
         'imagemin',
         'svgmin'
       ]
