@@ -37,7 +37,8 @@
       "bower": "~1.7",
       "grunt-bower-task": "yatskevich/grunt-bower-task#devel"  ,
       "grunt-angular-templates": "^0.5.9",
-      "grunt-header": "^1.0.0"
+      "grunt-header": "^1.0.0",
+      "grunt-contrib-less": "^1.4.0"
   },
   "engines": {
     "node": ">=0.10.0"

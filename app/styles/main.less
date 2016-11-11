@@ -1,0 +1,81 @@
+@import url(//fonts.googleapis.com/css?family=Raleway:300,400,200,100,500,600);
+
+@import "../../bower_components/ng-mosaics/app/styles/variables.less";
+@import "../../bower_components/ng-mosaics/app/styles/mosaics.less";
+
+
+html, body {
+  height: 100%;
+}
+
+/* Space out content a bit */
+body {
+
+}
+
+.container {
+  width: 100%;
+}
+
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.title() {
+  font-family: Raleway, sans-serif;
+  /* font-variant: small-caps; */
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+h1, h2, h3, h4, h5 {
+   .title
+}
+
+h1, h2, h3 {
+  margin-top: 5px;
+}
+
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: inherit;
+}
+
+
+
+.breadcrumb {
+  li {
+    vertical-align: bottom;
+  }
+}
+
+.nav>li {
+
+  >a {
+    .title;
+    padding: 5px 10px;
+  }
+
+  .btn {
+    padding-top: 3px;
+    padding-right: 0px;
+  }
+
+  &.btn-group {
+    &:hover {
+      background-color: #eee;
+    }
+
+    a:first-child {
+      padding-right: 0;
+    }
+  }
+}
+
+
+

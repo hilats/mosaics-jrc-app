@@ -1,57 +1,124 @@
 
     <div class="header">
-        <ul class="nav nav-pills pull-right">
-            <!--
-            <li class="active"><a ng-href="#">Home</a></li>
-            <li><a ng-href="#/about">About</a></li>
-            </li>
-            -->
-            <li class="btn-group" ng-if="currentUser && currentUser.authenticated">
-                    <a class="btn" ui-sref="mosaics.query({query:'mine'})">My Mosaics</a>
-                    <a class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="caret"></span>
-                        <span class="sr-only">Toggle Dropdown</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a ui-sref="mosaics.all">All Mosaics</a></li>
-                    </ul>
-            </li>
 
-            <li ng-if="!(currentUser && currentUser.authenticated)"><a ui-sref="mosaics.all">All Mosaics</a></li>
-            <li class="dropdown">
-                <a href="#/samples" class="dropdown-toggle" data-toggle="dropdown">Samples <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                    <li ng-repeat="sample in samplesCtrl.samples"><a href="#/samples/{{sample}}">{{sample}}</a></li>
-                </ul>
-            </li>
-            <li><a ui-sref="sparql">Sparql</a></li>
-            <li ng-controller="LoginCtrl as loginCtrl" class="loginMenu">
-                <div ng-if="currentUser && currentUser.authenticated" class="btn-group">
-                    <button type="button" class="btn btn-danger">{{currentUser.name}}</button>
-                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="caret"></span>
-                        <span class="sr-only">Toggle Dropdown</span>
+            <div class="hb1">
+                <div class="container relative">
+                    <a class="ec-logo" href="#"><img src="http://inspire.ec.europa.eu/cdn/latest/img/ec.logo/logo_en.gif" /></a>
+                    <span class="mt">Citizen Science Platform</span>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topm" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
-                    <ul class="dropdown-menu">
-                        <li><a ng-click="logout()">Logout</a></li>
+
+                    <div id="topm" class="topm navbar-collapse collapse">
+                        <ul class="lnk">
+                            <li><a href="/">About</a></li><li><a href="http://digitalearthlab.jrc.ec.europa.eu/mygeoss/contact.cfm">Contact</a></li><li><a href="http://ec.europa.eu/geninfo/legal_notices_en.htm" target="_blank">Legal Notice</a></li><li><a href="http://ec.europa.eu/ipg/about/cookies_notice/index_en.htm" target="_blank">Cookies</a></li>
+                        </ul>
+                        <select data-live-search="true" class="selectpicker">
+                            <!--
+                                        <option value="bg">български (bg)</option>
+                                        <option value="cs">ceština (cs)</option>
+                                        <option value="da">dansk (da)</option>
+                                        <option value="de">Deutsch (de)</option>
+                                        <option value="et">eesti keel (et)</option>
+                                        <option value="el">ελληνικά (el)</option>
+                            -->
+                            <option value="en">English (en)</option>
+                            <!--
+                                        <option value="es">español (es)</option>
+                                        <option value="fr">français (fr)</option>
+                                        <option value="hr">hrvatski (hr)</option>
+                                        <option value="it">italiano (it)</option>
+                                        <option value="lv">latviešu valoda (lv)</option>
+                                        <option value="lt">lietuviu kalba (lt)</option>
+                                        <option value="hu">magyar (hu)</option>
+                                        <option value="mt">Malti (mt)</option>
+                                        <option value="nl">Nederlands (nl)</option>
+                                        <option value="pl">polski (pl)</option>
+                                        <option value="pt">português (pt)</option>
+                                        <option value="ro">româna (ro)</option>
+                                        <option value="sk">slovencina (sk)</option>
+                                        <option value="sl">slovenšcina (sl)</option>
+                                        <option value="fi">suomi (fi)</option>
+                                        <option value="sv">svenska (sv)</option>
+                            -->
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <div class="hb2">
+                <div class="container">
+                    <span>Mosaics</span>
+
+                    <ul class="nav nav-pills pull-right">
+                        <!--
+                        <li class="active"><a ng-href="#">Home</a></li>
+                        <li><a ng-href="#/about">About</a></li>
+                        </li>
+                        -->
+                        <li class="btn-group" ng-if="currentUser && currentUser.authenticated">
+                            <a class="btn" ui-sref="mosaics.query({query:'mine'})">My Mosaics</a>
+                            <a class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a ui-sref="mosaics.all">All Mosaics</a></li>
+                            </ul>
+                        </li>
+
+                        <li ng-if="!(currentUser && currentUser.authenticated)"><a ui-sref="mosaics.all">All Mosaics</a></li>
+                        <li><a ui-sref="sparql">Sparql</a></li>
+                        <li ng-controller="LoginCtrl as loginCtrl" class="loginMenu">
+                            <div ng-if="currentUser && currentUser.authenticated" class="btn-group">
+                                <button type="button" class="btn btn-danger">{{currentUser.name}}</button>
+                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a ng-click="logout()">Logout</a></li>
+                                </ul>
+                            </div>
+                            <div ng-if="!(currentUser && currentUser.authenticated)" class="btn-group">
+                                <button type="button" class="btn btn-danger">Log in</button>
+                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a ng-click="authenticate('google')">Sign in with Google</a></li>
+                                    <li><a ng-click="authenticate('facebook')">Sign in with Facebook</a></li>
+                                    <li><a ng-click="authenticate('linkedin')">Sign in with LinkedIn</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Register</a></li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-                <div ng-if="!(currentUser && currentUser.authenticated)" class="btn-group">
-                    <button type="button" class="btn btn-danger">Log in</button>
-                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="caret"></span>
-                        <span class="sr-only">Toggle Dropdown</span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a ng-click="authenticate('google')">Sign in with Google</a></li>
-                        <li><a ng-click="authenticate('facebook')">Sign in with Facebook</a></li>
-                        <li><a ng-click="authenticate('linkedin')">Sign in with LinkedIn</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Register</a></li>
-                    </ul>
+
+
+            </div>
+            <div class="hb3 hidden-xs">
+                <div class="container">
+                    <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+                        <li property="itemListElement" typeof="ListItem">
+                            <a property="item" typeof="WebPage" href="http://ec.europa.eu/index_en.htm"><span property="name">European Commission</span></a>
+                        </li>
+                        <li property="itemListElement" typeof="ListItem">
+                            <a property="item" typeof="WebPage" href="https://ec.europa.eu/jrc/en"><span property="name">JRC</span></a>
+                        </li>
+                        <li property="itemListElement" typeof="ListItem">
+                            <a property="item" typeof="WebPage" href="http://dev-citizen-science.ies.jrc.it/campaizx"><span property="name">Citizen Science Platform</span></a>
+                        </li>
+                        <li class="active" property="itemListElement" typeof="ListItem">
+                            <a property="item" typeof="WebPage" href="/"><span property="name">Invasive Alien Species Hub</span></a>
+                        </li>
+                    </ol>
                 </div>
-            </li>
-        </ul>
-        <h3 class="text-muted">mosaicsApp</h3>
     </div>
 
