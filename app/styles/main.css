@@ -373,6 +373,18 @@ body {
 .panel.slidein .header_padder {
   height: 38px;
 }
+.header .loginMenu .dropdown-menu {
+  left: initial;
+  right: 0;
+}
+.header .menu_header {
+  position: absolute;
+  top: 110px;
+  right: 20px;
+}
+.header .menu_header > ul > li > a {
+  color: #ffffff;
+}
 /* Space out content a bit */
 .container {
   width: 100%;

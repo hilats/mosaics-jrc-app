@@ -52,57 +52,56 @@
             <div class="hb2">
                 <div class="container">
                     <span>Mosaics</span>
-
-                    <ul class="nav nav-pills pull-right">
-                        <!--
-                        <li class="active"><a ng-href="#">Home</a></li>
-                        <li><a ng-href="#/about">About</a></li>
-                        </li>
-                        -->
-                        <li class="btn-group" ng-if="currentUser && currentUser.authenticated">
-                            <a class="btn" ui-sref="mosaics.query({query:'mine'})">My Mosaics</a>
-                            <a class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="caret"></span>
-                                <span class="sr-only">Toggle Dropdown</span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a ui-sref="mosaics.all">All Mosaics</a></li>
-                            </ul>
-                        </li>
-
-                        <li ng-if="!(currentUser && currentUser.authenticated)"><a ui-sref="mosaics.all">All Mosaics</a></li>
-                        <li><a ui-sref="sparql">Sparql</a></li>
-                        <li ng-controller="LoginCtrl as loginCtrl" class="loginMenu">
-                            <div ng-if="currentUser && currentUser.authenticated" class="btn-group">
-                                <button type="button" class="btn btn-danger">{{currentUser.name}}</button>
-                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="caret"></span>
-                                    <span class="sr-only">Toggle Dropdown</span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a ng-click="logout()">Logout</a></li>
-                                </ul>
-                            </div>
-                            <div ng-if="!(currentUser && currentUser.authenticated)" class="btn-group">
-                                <button type="button" class="btn btn-danger">Log in</button>
-                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="caret"></span>
-                                    <span class="sr-only">Toggle Dropdown</span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a ng-click="authenticate('google')">Sign in with Google</a></li>
-                                    <li><a ng-click="authenticate('facebook')">Sign in with Facebook</a></li>
-                                    <li><a ng-click="authenticate('linkedin')">Sign in with LinkedIn</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#">Register</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
-
-
             </div>
+        <div class="menu_header container">
+            <ul class="nav nav-pills pull-right">
+                <!--
+                <li class="active"><a ng-href="#">Home</a></li>
+                <li><a ng-href="#/about">About</a></li>
+                </li>
+                -->
+                <li class="btn-group" ng-if="currentUser && currentUser.authenticated">
+                    <a class="btn" ui-sref="mosaics.query({query:'mine'})">My Mosaics</a>
+                    <a class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a ui-sref="mosaics.all">All Mosaics</a></li>
+                    </ul>
+                </li>
+
+                <li ng-if="!(currentUser && currentUser.authenticated)"><a ui-sref="mosaics.all">All Mosaics</a></li>
+                <li><a ui-sref="sparql">Sparql</a></li>
+                <li ng-controller="LoginCtrl as loginCtrl" class="loginMenu">
+                    <div ng-if="currentUser && currentUser.authenticated" class="btn-group">
+                        <button type="button" class="btn btn-danger">{{currentUser.name}}</button>
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a ng-click="logout()">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div ng-if="!(currentUser && currentUser.authenticated)" class="btn-group">
+                        <button type="button" class="btn btn-danger">Log in</button>
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a ng-click="authenticate('google')">Sign in with Google</a></li>
+                            <li><a ng-click="authenticate('facebook')">Sign in with Facebook</a></li>
+                            <li><a ng-click="authenticate('linkedin')">Sign in with LinkedIn</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Register</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
             <div class="hb3 hidden-xs">
                 <div class="container">
                     <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
@@ -116,7 +115,7 @@
                             <a property="item" typeof="WebPage" href="http://dev-citizen-science.ies.jrc.it/campaizx"><span property="name">Citizen Science Platform</span></a>
                         </li>
                         <li class="active" property="itemListElement" typeof="ListItem">
-                            <a property="item" typeof="WebPage" href="/"><span property="name">Invasive Alien Species Hub</span></a>
+                            <a property="item" typeof="WebPage" href="/"><span property="name">Mosaics</span></a>
                         </li>
                     </ol>
                 </div>
