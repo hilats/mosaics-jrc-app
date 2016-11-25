@@ -35,16 +35,19 @@
                 </div>
             </div>
         </div>
-        <div id="annotationsList" ng-if="selectedRes" class="subpanel">
+        <div id="annotationsList" ng-if="selectedRes" class="subpanel" ng-init="displayFrom = true">
             <div class="panel_header">
-                <h5>Annotations</h5>
+                <h5>Annotations
+                    <span class="glyphicon glyphicon-log-out" ng-click="displayFrom = true" ng-style="displayFrom?undefined:{opacity:0.7}"></span>
+                    <span class="glyphicon glyphicon-log-in" ng-click="displayFrom = false" ng-style="!displayFrom?undefined:{opacity:0.7}"></span>
+                </h5>
             </div>
             <!--
             <span ng-click="createAnnotation()">New Annotation</span>
             -->
 
             <div class="panel_content" >
-                    <div ng-repeat="annot in annotationsFromMap[selectedRes['source']]">
+                    <div ng-repeat="annot in (displayFrom?annotationsFromMap:annotationsToMap)[selectedRes['source']]">
                     <span ng-click="gotoAnnotation(annot)">{{annot['dc:title']}}</span>
                     <span class="action glyphicon glyphicon-trash" ng-click="deleteResource(res)"></span>
                 </div>

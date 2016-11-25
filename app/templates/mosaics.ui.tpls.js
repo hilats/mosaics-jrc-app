@@ -39,16 +39,19 @@ angular.module('mosaicsControllers').run(['$templateCache', function($templateCa
     "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "        <div id=\"annotationsList\" ng-if=\"selectedRes\" class=\"subpanel\">\n" +
+    "        <div id=\"annotationsList\" ng-if=\"selectedRes\" class=\"subpanel\" ng-init=\"displayFrom = true\">\n" +
     "            <div class=\"panel_header\">\n" +
-    "                <h5>Annotations</h5>\n" +
+    "                <h5>Annotations\n" +
+    "                    <span class=\"glyphicon glyphicon-log-out\" ng-click=\"displayFrom = true\" ng-style=\"displayFrom?undefined:{opacity:0.7}\"></span>\n" +
+    "                    <span class=\"glyphicon glyphicon-log-in\" ng-click=\"displayFrom = false\" ng-style=\"!displayFrom?undefined:{opacity:0.7}\"></span>\n" +
+    "                </h5>\n" +
     "            </div>\n" +
     "            <!--\n" +
     "            <span ng-click=\"createAnnotation()\">New Annotation</span>\n" +
     "            -->\n" +
     "\n" +
     "            <div class=\"panel_content\" >\n" +
-    "                    <div ng-repeat=\"annot in annotationsFromMap[selectedRes['source']]\">\n" +
+    "                    <div ng-repeat=\"annot in (displayFrom?annotationsFromMap:annotationsToMap)[selectedRes['source']]\">\n" +
     "                    <span ng-click=\"gotoAnnotation(annot)\">{{annot['dc:title']}}</span>\n" +
     "                    <span class=\"action glyphicon glyphicon-trash\" ng-click=\"deleteResource(res)\"></span>\n" +
     "                </div>\n" +
