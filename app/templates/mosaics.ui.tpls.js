@@ -99,7 +99,7 @@ angular.module('mosaicsControllers').run(['$templateCache', function($templateCa
     "                    </div>\n" +
     "                    <div class=\"linkedResources\" ng-show=\"$root.keys(displayedAnnotationResources).length > 0\">\n" +
     "                        <div class=\"annotResContainer\" ng-repeat=\"(hash, ann) in displayedAnnotationResources\">\n" +
-    "                            <div class=\"annotResViewer\" ng-init=\"displayedResource = ann\" ng-controller=\"ResourceDisplayCtrl as resDisplayCtrl\">\n" +
+    "                            <div resource-display class=\"annotResViewer\" ng-res=\"ann\" close-viewer-fn=\"closeAnnotationResource\">\n" +
     "\n" +
     "                            </div>\n" +
     "                        </div>\n" +
