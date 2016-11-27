@@ -317,6 +317,10 @@ row {
 .back {
   transform: rotateY(180deg);
 }
+.annotList {
+  font-size: 80%;
+  margin-left: 1em;
+}
 .panel {
   /* Override bootstrap panel definition */
   margin-bottom: inherit;
@@ -346,7 +350,7 @@ row {
   float: right;
   display: none;
 }
-.panel .panel_content :hover .action {
+.panel .panel_content :hover > .action {
   display: inherit;
 }
 .panel.left {

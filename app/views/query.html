@@ -30,8 +30,14 @@
             </div>
             <div class="panel_content" >
                 <div ng-repeat="res in selected.resources">
-                    <span class="link" ui-sref="mosaics.id.resource({id:selected.id, res:res.id})" ui-sref-active="active">{{res['dc:title']}}</span>
-                    <span class="action glyphicon glyphicon-trash" ng-click="deleteResource(selected, res)"></span>
+                    <div>
+                        <span class="action glyphicon glyphicon-trash" ng-click="deleteResource(selected, res)"></span>
+                        <span class="link" ui-sref="mosaics.id.resource({id:selected.id, res:res.id})" ui-sref-active="active">{{res['dc:title']}}</span>
+                    </div>
+                    <div ng-if="selectedRes == res" class="annotList" ng-repeat="annot in annotationsFromMap[res['source']]">
+                        <span ng-click="gotoAnnotation(annot)">{{annot['dc:title']}}</span>
+                        <span class="action glyphicon glyphicon-trash" ng-click="deleteResource(res)"></span>
+                    </div>
                 </div>
             </div>
         </div>
