@@ -54,8 +54,11 @@ angular.module('mosaicsControllers').run(['$templateCache', function($templateCa
     "        <div id=\"annotationsList\" ng-if=\"selectedRes\" class=\"subpanel\" ng-init=\"displayFrom = true\">\n" +
     "            <div class=\"panel_header\">\n" +
     "                <h5>Annotations\n" +
+    "                    <!--\n" +
     "                    <span class=\"glyphicon glyphicon-log-out\" ng-click=\"displayFrom = true\" ng-style=\"displayFrom?undefined:{opacity:0.7}\"></span>\n" +
     "                    <span class=\"glyphicon glyphicon-log-in\" ng-click=\"displayFrom = false\" ng-style=\"!displayFrom?undefined:{opacity:0.7}\"></span>\n" +
+    "                    -->\n" +
+    "                    <span style=\"float:right\" class=\"action glyphicon glyphicon-cog\" ng-click=\"editAnnotationFilterModal()\"></span>\n" +
     "                </h5>\n" +
     "            </div>\n" +
     "            <!--\n" +

@@ -50,8 +50,11 @@
         <div id="annotationsList" ng-if="selectedRes" class="subpanel" ng-init="displayFrom = true">
             <div class="panel_header">
                 <h5>Annotations
+                    <!--
                     <span class="glyphicon glyphicon-log-out" ng-click="displayFrom = true" ng-style="displayFrom?undefined:{opacity:0.7}"></span>
                     <span class="glyphicon glyphicon-log-in" ng-click="displayFrom = false" ng-style="!displayFrom?undefined:{opacity:0.7}"></span>
+                    -->
+                    <span style="float:right" class="action glyphicon glyphicon-cog" ng-click="editAnnotationFilterModal()"></span>
                 </h5>
             </div>
             <!--

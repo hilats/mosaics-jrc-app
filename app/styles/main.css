@@ -1,9 +1,10 @@
 @import url(//fonts.googleapis.com/css?family=Raleway:300,400,200,100,500,600);
 @import "webfonts/onlinewebfonts.css";
 .loader {
-  margin: 100px auto;
+  z-index: 100;
   font-size: 25px;
   width: 1em;
+  margin: 100px 50%;
   height: 1em;
   border-radius: 50%;
   position: relative;
