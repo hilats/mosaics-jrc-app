@@ -39,6 +39,12 @@ angular.module('mosaicsControllers').run(['$templateCache', function($templateCa
     "                        <span class=\"link\" ui-sref=\"mosaics.id.resource({id:selected.id, res:res.id})\" ui-sref-active=\"active\">{{res['dc:title']}}</span>\n" +
     "                    </div>\n" +
     "                    <div ng-if=\"selectedRes == res\" class=\"annotList\" ng-repeat=\"annot in annotationsFromMap[res['source']]\">\n" +
+    "                        <span class=\"glyphicon glyphicon-log-out\"/>\n" +
+    "                        <span ng-click=\"gotoAnnotation(annot)\">{{annot['dc:title']}}</span>\n" +
+    "                        <span class=\"action glyphicon glyphicon-trash\" ng-click=\"deleteResource(res)\"></span>\n" +
+    "                    </div>\n" +
+    "                    <div ng-if=\"selectedRes == res\" class=\"annotList\" ng-repeat=\"annot in annotationsToMap[res['source']]\">\n" +
+    "                        <span class=\"glyphicon glyphicon-log-in\"/>\n" +
     "                        <span ng-click=\"gotoAnnotation(annot)\">{{annot['dc:title']}}</span>\n" +
     "                        <span class=\"action glyphicon glyphicon-trash\" ng-click=\"deleteResource(res)\"></span>\n" +
     "                    </div>\n" +
