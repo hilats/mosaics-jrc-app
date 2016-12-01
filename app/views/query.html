@@ -35,6 +35,12 @@
                         <span class="link" ui-sref="mosaics.id.resource({id:selected.id, res:res.id})" ui-sref-active="active">{{res['dc:title']}}</span>
                     </div>
                     <div ng-if="selectedRes == res" class="annotList" ng-repeat="annot in annotationsFromMap[res['source']]">
+                        <span class="glyphicon glyphicon-log-out"/>
+                        <span ng-click="gotoAnnotation(annot)">{{annot['dc:title']}}</span>
+                        <span class="action glyphicon glyphicon-trash" ng-click="deleteResource(res)"></span>
+                    </div>
+                    <div ng-if="selectedRes == res" class="annotList" ng-repeat="annot in annotationsToMap[res['source']]">
+                        <span class="glyphicon glyphicon-log-in"/>
                         <span ng-click="gotoAnnotation(annot)">{{annot['dc:title']}}</span>
                         <span class="action glyphicon glyphicon-trash" ng-click="deleteResource(res)"></span>
                     </div>
