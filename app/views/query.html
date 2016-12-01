@@ -35,7 +35,7 @@
                         <span class="link" ui-sref="mosaics.id.resource({id:selected.id, res:res.id})" ui-sref-active="active">{{res['dc:title']}}</span>
                     </div>
                     <div ng-if="selectedRes == res" class="annotList" ng-repeat="annot in annotationsFromMap[res['source']]">
-                        <span class="glyphicon glyphicon-log-out"/>
+                        <span class="glyphicon" ng-class="annot.body && annot.body.source ? 'glyphicon-log-out' : 'glyphicon-comment' "/>
                         <span ng-click="gotoAnnotation(annot)">{{annot['dc:title']}}</span>
                         <span class="action glyphicon glyphicon-trash" ng-click="deleteResource(res)"></span>
                     </div>
@@ -78,7 +78,7 @@
             <span ng-if="selectedRes">
                 / <span editable ng-model="selectedRes['dc:title']"></span>
             </span>
-            <div style="float:right;">
+            <div style="float:right; line-height: initial">
                 <div class="btn-group" style="vertical-align: text-top" >
                     <span class="action dropdown-toggle" ng-class="{i_right_panel: layout == 'right', i_layout_design: layout == 'bottom', i_four_grid: layout == 'grid'}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     </span>
