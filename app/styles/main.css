@@ -407,9 +407,13 @@ row {
 .annotationLayer .addLink:hover {
   border-color: inherit;
 }
+.pdfViewer {
+  /* re-align text overlay with pdf */
+}
 .pdfViewer .page {
-  margin: 0;
+  margin: 9px auto 0px auto;
   border: none;
+  /* replace raster shadow with css one */
   border-image: none;
   box-shadow: 0 0 10px;
 }
