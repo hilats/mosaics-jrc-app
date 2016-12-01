@@ -39,7 +39,7 @@ angular.module('mosaicsControllers').run(['$templateCache', function($templateCa
     "                        <span class=\"link\" ui-sref=\"mosaics.id.resource({id:selected.id, res:res.id})\" ui-sref-active=\"active\">{{res['dc:title']}}</span>\n" +
     "                    </div>\n" +
     "                    <div ng-if=\"selectedRes == res\" class=\"annotList\" ng-repeat=\"annot in annotationsFromMap[res['source']]\">\n" +
-    "                        <span class=\"glyphicon glyphicon-log-out\"/>\n" +
+    "                        <span class=\"glyphicon\" ng-class=\"annot.body && annot.body.source ? 'glyphicon-log-out' : 'glyphicon-comment' \"/>\n" +
     "                        <span ng-click=\"gotoAnnotation(annot)\">{{annot['dc:title']}}</span>\n" +
     "                        <span class=\"action glyphicon glyphicon-trash\" ng-click=\"deleteResource(res)\"></span>\n" +
     "                    </div>\n" +
@@ -82,7 +82,7 @@ angular.module('mosaicsControllers').run(['$templateCache', function($templateCa
     "            <span ng-if=\"selectedRes\">\n" +
     "                / <span editable ng-model=\"selectedRes['dc:title']\"></span>\n" +
     "            </span>\n" +
-    "            <div style=\"float:right;\">\n" +
+    "            <div style=\"float:right; line-height: initial\">\n" +
     "                <div class=\"btn-group\" style=\"vertical-align: text-top\" >\n" +
     "                    <span class=\"action dropdown-toggle\" ng-class=\"{i_right_panel: layout == 'right', i_layout_design: layout == 'bottom', i_four_grid: layout == 'grid'}\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n" +
     "                    </span>\n" +

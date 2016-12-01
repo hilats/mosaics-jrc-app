@@ -408,9 +408,13 @@ row {
   border-color: inherit;
 }
 .pdfViewer .page {
-  margin: 0
+  margin: 0;
   border: none;
   border-image: none;
+  box-shadow: 0 0 10px;
+}
+.pdfViewer .textLayer {
+  top: -4px;
 }
 .olControlLayerSwitcher {
   bottom: 0px;
