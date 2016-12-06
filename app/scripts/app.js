@@ -108,6 +108,19 @@
                     })
                 })
 
+            $http.get('/api/server/config.json')
+                .then(function(res) {
+                    var serverConfig = res.data;
+
+                    if (serverConfig.proxyPort && serverConfig.proxyPort != -1) {
+                        //FRAGVIZ.UTILS.proxyUrl = 'http://server.mosaics.highlatitud.es/proxy'
+                        var loc = window.location;
+                        FRAGVIZ.UTILS.proxyUrl = loc.protocol+ '//' + loc.hostname +':' +serverConfig.proxyPort + '/proxy';
+                    } else {
+                        FRAGVIZ.UTILS.proxyUrl = '/proxy';
+                    }
+                })
+
             $rootScope.auth = $auth
             $rootScope.$watch("auth.isAuthenticated()", function(isAuthenticated) {
                 $rootScope.currentUser = isAuthenticated && Authentication.get()
@@ -173,7 +186,6 @@
     };
 
     PDFJS.workerSrc  = 'libs/pdfjs-dist/build/pdf.worker.js'
-    FRAGVIZ.UTILS.proxyUrl = '/proxy'
     OpenLayers.ImgPath = "libs/openlayers2/img/"
     OpenLayers.ThemePath = "libs/openlayers2/theme/default"
 
