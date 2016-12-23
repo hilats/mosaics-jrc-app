@@ -94,9 +94,11 @@
 .app-container > div {
   display: table-row;
   height: 100%;
-}
-.app-container > div:first-child {
-  height: 0px;
+  /*
+    &:first-child {
+      height: 0px;
+    }
+    */
 }
 cell {
   display: table-cell;
@@ -105,6 +107,9 @@ cell {
 row {
   display: table-row;
   height: 100%;
+}
+.search_results {
+  margin-top: 1em;
 }
 .mosaicDisplay {
   position: relative;
@@ -488,10 +493,10 @@ row {
 .actionBar:hover .onhover {
   display: inherit;
 }
-.htmlAnnot > .actionBar {
+.htmlAnnot .actionBar {
   display: none;
 }
-.htmlAnnot:hover > .actionBar {
+.htmlAnnot:hover .actionBar {
   display: block;
 }
 .searchCombo {

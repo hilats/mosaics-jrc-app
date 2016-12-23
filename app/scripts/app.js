@@ -30,7 +30,7 @@
         ])
         .config(function ($urlRouterProvider, $authProvider, $stateProvider, $httpProvider) {
 
-            $urlRouterProvider.otherwise('/');
+            $urlRouterProvider.otherwise('/search');
 
             $stateProvider
                 .state('main', {
@@ -61,6 +61,12 @@
                     //controller: 'MosaicsCtrl',
                     reloadOnSearch: false
                 })
+                .state('mosaics.id.annotation', {
+                    url: '/annot/:ann',
+                    templateUrl: 'views/query.html',
+                    //controller: 'MosaicsCtrl',
+                    reloadOnSearch: false
+                })
                 .state('mosaics.id.resource', {
                     url: '/:res',
                     templateUrl: 'views/query.html',
@@ -71,6 +77,11 @@
                     url: '/sparql',
                     templateUrl: 'views/sparql.html',
                     controller: 'SparqlCtrl'
+                })
+                .state('search', {
+                    url: '/search?query',
+                    templateUrl: 'views/search.html',
+                    controller: 'SearchCtrl'
                 })
 
             authProvider = $authProvider
