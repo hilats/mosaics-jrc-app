@@ -16,6 +16,7 @@
     var app = angular
         .module('mosaicsAppApp', [
             'mosaicsPreviewModule',
+            'mosaicsSearchModule',
             'ngAnimate',
             'ngCookies',
             'ngResource',
@@ -78,11 +79,6 @@
                     url: '/sparql',
                     templateUrl: 'views/sparql.html',
                     controller: 'SparqlCtrl'
-                })
-                .state('search', {
-                    url: '/search?query',
-                    templateUrl: 'views/search.html',
-                    controller: 'SearchCtrl'
                 })
 
             authProvider = $authProvider
