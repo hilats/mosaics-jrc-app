@@ -68,7 +68,7 @@
                     reloadOnSearch: false
                 })
                 .state('mosaics.id.resource', {
-                    url: '/:res',
+                    url: '/res/:res',
                     templateUrl: 'views/query.html',
                     //controller: 'MosaicsCtrl',
                     reloadOnSearch: false
