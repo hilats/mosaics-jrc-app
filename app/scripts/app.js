@@ -15,6 +15,7 @@
 
     var app = angular
         .module('mosaicsAppApp', [
+            'mosaicsPreviewModule',
             'ngAnimate',
             'ngCookies',
             'ngResource',
