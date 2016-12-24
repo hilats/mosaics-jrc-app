@@ -87,13 +87,15 @@
             authProvider = $authProvider
         })
 
-        .factory('AppState', function() {
+        .factory('AppState', function($q) {
             return {
+                status : $q.defer(),
                 apiUrl : '/api'
+                //apiUrl : '/samples'
             };
         })
 
-        .run(function($auth, $rootScope, Authentication, $http) {
+        .run(function($auth, $rootScope, Authentication, $http, AppState) {
 
             $http.get('/api/auth/providers.json')
                 .then(function(res) {
@@ -130,6 +132,10 @@
                     } else {
                         FRAGVIZ.UTILS.proxyUrl = '/proxy';
                     }
+
+                    // resolve AppState as done
+                    // TODO there must be a better place to do this
+                    AppState.status.resolve(true)
                 })
 
             $rootScope.auth = $auth
