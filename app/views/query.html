@@ -103,7 +103,7 @@
                 <div class="mosaicEditor back">
                     <ui-codemirror id="mosaicEditor" ui-codemirror-opts="editorOptions" ng-model="jsonMosaic"></ui-codemirror>
                 </div>
-                <div class="mosaicDisplay front" mosaic-display ng-res="selectedRes" annotations-from-map="annotationsFromMap" annotations-to-map="annotationsToMap">
+                <div class="mosaicDisplay front" mosaic-display ng-res="selectedRes" annotations-from-map="annotationsFromMap" annotations-to-map="annotationsToMap" filtered-annotations="filteredAnnotations" filter-annotations-dialog="editAnnotationFilterModal">
                     <div class="mainResource">
                         <div id="theContainer" style="height: 100%"></div>
                     </div>
