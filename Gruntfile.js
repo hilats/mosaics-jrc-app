@@ -441,6 +441,12 @@ module.exports = function (grunt) {
             cwd: 'bower_components/ng-mosaics/app/styles',
             src: ['webfonts/**'],
             dest: '.tmp/styles'
+        },
+        mosaics_images: {
+            expand: true,
+            cwd: 'bower_components/ng-mosaics/app/images',
+            src: ['**'],
+            dest: '.tmp/images'
         }
     },
 
@@ -450,19 +456,22 @@ module.exports = function (grunt) {
         'copy:styles',
         'copy:mintlibs',
         'copy:fragviz_include',
-          'copy:mosaics_webfonts'
+        'copy:mosaics_webfonts',
+          'copy:mosaics_images'
       ],
       test: [
         'copy:styles',
         'copy:mintlibs',
         'copy:fragviz_include',
-          'copy:mosaics_webfonts'
+          'copy:mosaics_webfonts',
+          'copy:mosaics_images'
       ],
       dist: [
         'copy:styles',
         'copy:mintlibs',
         'copy:fragviz_include',
           'copy:mosaics_webfonts',
+          'copy:mosaics_images',
         'imagemin',
         'svgmin'
       ]

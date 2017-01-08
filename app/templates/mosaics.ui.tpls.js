@@ -110,7 +110,7 @@ angular.module('mosaicsControllers').run(['$templateCache', function($templateCa
     "                <div class=\"mosaicEditor back\">\n" +
     "                    <ui-codemirror id=\"mosaicEditor\" ui-codemirror-opts=\"editorOptions\" ng-model=\"jsonMosaic\"></ui-codemirror>\n" +
     "                </div>\n" +
-    "                <div class=\"mosaicDisplay front\" mosaic-display ng-res=\"selectedRes\" annotations-from-map=\"annotationsFromMap\" annotations-to-map=\"annotationsToMap\">\n" +
+    "                <div class=\"mosaicDisplay front\" mosaic-display ng-res=\"selectedRes\" annotations-from-map=\"annotationsFromMap\" annotations-to-map=\"annotationsToMap\" filtered-annotations=\"filteredAnnotations\" filter-annotations-dialog=\"editAnnotationFilterModal\">\n" +
     "                    <div class=\"mainResource\">\n" +
     "                        <div id=\"theContainer\" style=\"height: 100%\"></div>\n" +
     "                    </div>\n" +

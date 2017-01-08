@@ -381,8 +381,34 @@ row {
   /*border-bottom: 1px solid grey; */
   margin-bottom: 2px;
 }
+.hoverMenu > div {
+  margin: 0;
+  opacity: 0.8;
+}
+.dropdown-hover .dropdown-menu {
+  margin: 0;
+  background-color: black;
+}
+.dropdown-hover .dropdown-menu .action {
+  color: white;
+}
+.dropdown-hover:hover .dropdown-menu {
+  display: initial;
+}
+.mosaicGraph:hover .hoverMenu.widget {
+  display: block;
+}
 /* Icon definitions
 */
+.icon-graph {
+  background-image: url(../images/icons/graph.png);
+  background-size: contain;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  filter: invert(100%) brightness(2);
+  vertical-align: middle;
+}
 .icon-dock-right {
   mask-image: url(../images/icons/1457716502_interface-14.svg);
   -webkit-mask-image: url(../images/icons/1457716502_interface-14.svg);
