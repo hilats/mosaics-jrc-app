@@ -69,6 +69,167 @@
     box-shadow: 0em -2.6em 0em 0em rgba(33, 113, 216, 0.2), 1.8em -1.8em 0 0em rgba(33, 113, 216, 0.2), 2.5em 0em 0 0em rgba(33, 113, 216, 0.2), 1.75em 1.75em 0 0em rgba(33, 113, 216, 0.2), 0em 2.5em 0 0em rgba(33, 113, 216, 0.2), -1.8em 1.8em 0 0em rgba(33, 113, 216, 0.5), -2.6em 0em 0 0em rgba(33, 113, 216, 0.7), -1.8em -1.8em 0 0em #2171d8;
   }
 }
+.gis-icon {
+  background-image: url("../images/icons/gis-resources-sprite-icons.png");
+}
+.mime-icon {
+  background: url("../images/icons/sprite-resource-icons.png") no-repeat 0 0;
+  width: 32px;
+  height: 35px;
+  background-position: 0px -62px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.mime-icon[data-mimetype=rdf],
+.mime-icon[data-mimetype*=rdf] {
+  background: url("../images/icons/sprite-resource-icons.png") no-repeat 0 0;
+  width: 32px;
+  height: 35px;
+  background-position: -32px -62px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.mime-icon[data-mimetype=pdf],
+.mime-icon[data-mimetype*=pdf] {
+  background: url("../images/icons/sprite-resource-icons.png") no-repeat 0 0;
+  width: 32px;
+  height: 35px;
+  background-position: -64px -62px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.mime-icon[data-mimetype=api],
+.mime-icon[data-mimetype*=api] {
+  background: url("../images/icons/sprite-resource-icons.png") no-repeat 0 0;
+  width: 32px;
+  height: 35px;
+  background-position: -96px -62px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.mime-icon[data-mimetype=zip],
+.mime-icon[data-mimetype*=zip] {
+  background: url("../images/icons/sprite-resource-icons.png") no-repeat 0 0;
+  width: 32px;
+  height: 35px;
+  background-position: -128px -62px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.mime-icon[data-mimetype=xls],
+.mime-icon[data-mimetype*=xls] {
+  background: url("../images/icons/sprite-resource-icons.png") no-repeat 0 0;
+  width: 32px;
+  height: 35px;
+  background-position: -160px -62px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.mime-icon[data-mimetype=csv],
+.mime-icon[data-mimetype*=csv] {
+  background: url("../images/icons/sprite-resource-icons.png") no-repeat 0 0;
+  width: 32px;
+  height: 35px;
+  background-position: -192px -62px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.mime-icon[data-mimetype=txt],
+.mime-icon[data-mimetype*=txt] {
+  background: url("../images/icons/sprite-resource-icons.png") no-repeat 0 0;
+  width: 32px;
+  height: 35px;
+  background-position: -224px -62px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.mime-icon[data-mimetype=xml],
+.mime-icon[data-mimetype*=xml] {
+  background: url("../images/icons/sprite-resource-icons.png") no-repeat 0 0;
+  width: 32px;
+  height: 35px;
+  background-position: -256px -62px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.mime-icon[data-mimetype=json],
+.mime-icon[data-mimetype*=json] {
+  background: url("../images/icons/sprite-resource-icons.png") no-repeat 0 0;
+  width: 32px;
+  height: 35px;
+  background-position: -288px -62px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.mime-icon[data-mimetype=html],
+.mime-icon[data-mimetype*=html] {
+  background: url("../images/icons/sprite-resource-icons.png") no-repeat 0 0;
+  width: 32px;
+  height: 35px;
+  background-position: -320px -62px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.mime-icon[data-mimetype=wfs],
+.mime-icon[data-mimetype*=wfs] {
+  background: url("../images/icons/sprite-resource-icons.png") no-repeat 0 0;
+  width: 32px;
+  height: 35px;
+  background-position: 0px -62px;
+  vertical-align: middle;
+  display: inline-block;
+  background-image: url("../images/icons/gis-resources-sprite-icons.png");
+}
+.mime-icon[data-mimetype=wms],
+.mime-icon[data-mimetype*=wms] {
+  background: url("../images/icons/sprite-resource-icons.png") no-repeat 0 0;
+  width: 32px;
+  height: 35px;
+  background-position: -32px -62px;
+  vertical-align: middle;
+  display: inline-block;
+  background-image: url("../images/icons/gis-resources-sprite-icons.png");
+}
+.mime-icon[data-mimetype=gml],
+.mime-icon[data-mimetype*=gml] {
+  background: url("../images/icons/sprite-resource-icons.png") no-repeat 0 0;
+  width: 32px;
+  height: 35px;
+  background-position: -64px -62px;
+  vertical-align: middle;
+  display: inline-block;
+  background-image: url("../images/icons/gis-resources-sprite-icons.png");
+}
+.mime-icon[data-mimetype=kml],
+.mime-icon[data-mimetype*=kml] {
+  background: url("../images/icons/sprite-resource-icons.png") no-repeat 0 0;
+  width: 32px;
+  height: 35px;
+  background-position: -96px -62px;
+  vertical-align: middle;
+  display: inline-block;
+  background-image: url("../images/icons/gis-resources-sprite-icons.png");
+}
+.mime-icon[data-mimetype=geojson],
+.mime-icon[data-mimetype*=geojson] {
+  background: url("../images/icons/sprite-resource-icons.png") no-repeat 0 0;
+  width: 32px;
+  height: 35px;
+  background-position: -128px -62px;
+  vertical-align: middle;
+  display: inline-block;
+  background-image: url("../images/icons/gis-resources-sprite-icons.png");
+}
+.mime-icon[data-mimetype=wmts],
+.mime-icon[data-mimetype*=wmts] {
+  background: url("../images/icons/sprite-resource-icons.png") no-repeat 0 0;
+  width: 32px;
+  height: 35px;
+  background-position: -160px -62px;
+  vertical-align: middle;
+  display: inline-block;
+  background-image: url("../images/icons/gis-resources-sprite-icons.png");
+}
 @media screen and (max-width: 767px) {
 }
 @media (min-width: 768px) {
@@ -264,6 +425,10 @@ row {
 .autocomplete-suggestions {
   background-color: white;
   border: 1px solid gray;
+  border-radius: 2px;
+}
+.autocomplete-suggestions div:last-child {
+  padding: 5px;
 }
 /* Flip styling */
 /* entire container, keeps perspective */
@@ -525,14 +690,24 @@ row {
 .htmlAnnot:hover .actionBar {
   display: block;
 }
+.autocomplete-suggestions {
+  padding-top: 20px;
+  overflow: auto;
+}
 .searchCombo {
-  border-top: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-radius: 2px;
+  border-bottom: 1px #2a6496;
+  padding: 2px;
+  position: fixed;
+  background-color: white;
+  margin-top: -20px;
 }
 .searchCombo > span {
   padding: 2px 2px;
+  /* border: 1px solid black; */
+  border-radius: 2px;
+  margin: 1px;
+  background-color: #2a6496;
+  color: white;
 }
 .searchCombo > span.active {
   font-weight: bold;
