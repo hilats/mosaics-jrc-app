@@ -17,6 +17,7 @@
         .module('mosaicsAppApp', [
             'mosaicsPreviewModule',
             'mosaicsSearchModule',
+            'mosaicsProfileModule',
             'ngAnimate',
             'ngCookies',
             'ngResource',

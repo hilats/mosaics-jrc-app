@@ -112,11 +112,17 @@ angular.module('mosaicsControllers').run(['$templateCache', function($templateCa
     "                </div>\n" +
     "                <div class=\"mosaicDisplay front\" mosaic-display ng-res=\"selectedRes\" annotations-from-map=\"annotationsFromMap\" annotations-to-map=\"annotationsToMap\" filtered-annotations=\"filteredAnnotations\" filter-annotations-dialog=\"editAnnotationFilterModal\">\n" +
     "                    <div class=\"mainResource\">\n" +
-    "                        <div id=\"theContainer\" style=\"height: 100%\"></div>\n" +
+    "                        <div resource-display class=\"mainResViewer\" ng-res=\"displayedResource\"\n" +
+    "                             annotations-from-map=\"annotationsFromMap\"\n" +
+    "                             annotations-to-map=\"annotationsToMap\"\n" +
+    "                             annotation-renderer=\"annotationRenderer\"\n" +
+    "                             capture-fragment-fn=\"captureFragmentFn\">\n" +
+    "                        </div>\n" +
     "                    </div>\n" +
     "                    <div class=\"linkedResources\" ng-show=\"$root.keys(displayedAnnotationResources).length > 0\">\n" +
     "                        <div class=\"annotResContainer\" ng-repeat=\"(hash, ann) in displayedAnnotationResources\">\n" +
-    "                            <div resource-display class=\"annotResViewer\" ng-res=\"ann\" close-viewer-fn=\"closeAnnotationResource\">\n" +
+    "                            <div resource-display class=\"annotResViewer\" ng-res=\"ann\"\n" +
+    "                                 close-viewer-fn=\"closeAnnotationResource\">\n" +
     "                            </div>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
