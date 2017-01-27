@@ -105,11 +105,17 @@
                 </div>
                 <div class="mosaicDisplay front" mosaic-display ng-res="selectedRes" annotations-from-map="annotationsFromMap" annotations-to-map="annotationsToMap" filtered-annotations="filteredAnnotations" filter-annotations-dialog="editAnnotationFilterModal">
                     <div class="mainResource">
-                        <div id="theContainer" style="height: 100%"></div>
+                        <div resource-display class="mainResViewer" ng-res="displayedResource"
+                             annotations-from-map="annotationsFromMap"
+                             annotations-to-map="annotationsToMap"
+                             annotation-renderer="annotationRenderer"
+                             capture-fragment-fn="captureFragmentFn">
+                        </div>
                     </div>
                     <div class="linkedResources" ng-show="$root.keys(displayedAnnotationResources).length > 0">
                         <div class="annotResContainer" ng-repeat="(hash, ann) in displayedAnnotationResources">
-                            <div resource-display class="annotResViewer" ng-res="ann" close-viewer-fn="closeAnnotationResource">
+                            <div resource-display class="annotResViewer" ng-res="ann"
+                                 close-viewer-fn="closeAnnotationResource">
                             </div>
                         </div>
                     </div>
