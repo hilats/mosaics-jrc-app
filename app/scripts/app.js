@@ -242,7 +242,6 @@
 
     window.FRAGVIZ.styles = {
         include : "http://localhost:9000/libs/fragviz_include/styles/include.css",
-        sausage: "http://localhost:9000/libs/fragviz_include/scripts/extlibs/sausage/sausage.css"
     };
 
     PDFJS.workerSrc  = 'libs/pdfjs-dist/build/pdf.worker.js'

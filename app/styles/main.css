@@ -250,7 +250,7 @@
 }
 .app-container {
   display: table;
-  height: 100%;
+  height: calc(100% - 70px - 10px);
 }
 .app-container > div {
   display: table-row;
@@ -295,6 +295,9 @@ row {
   width: 100%;
   height: 100%;
   border: 1px solid #bbb;
+}
+[class*="layout-"] .mainResViewer {
+  height: 100%;
 }
 [class*="layout-"] .linkedResources .annotResContainer {
   border: 1px solid #bbb;
@@ -345,7 +348,7 @@ row {
   min-width: 800px;
 }
 .layout-right .mainResource #theContainer {
-  /* required to have fixed position refer to this element (for sausage bar) */
+  /* required to have fixed position refer to this element (for scrolllinks bar) */
   transform: rotateY(0deg);
 }
 .layout-right .linkedResources {
@@ -364,7 +367,7 @@ row {
 }
 .layout-right .linkedResources .annotResViewer {
   height: 100%;
-  /* required to have fixed position refer to this element (for sausage bar) */
+  /* required to have fixed position refer to this element (for scrolllinks bar) */
   transform: rotateY(0deg);
 }
 .layout-bottom .mainResource {
@@ -375,7 +378,7 @@ row {
   height: 60%;
 }
 .layout-bottom .mainResource #theContainer {
-  /* required to have fixed position refer to this element (for sausage bar) */
+  /* required to have fixed position refer to this element (for scrolllinks bar) */
   transform: rotateY(0deg);
 }
 .layout-bottom .linkedResources {
@@ -390,7 +393,7 @@ row {
 }
 .layout-bottom .linkedResources .annotResViewer {
   height: 100%;
-  /* required to have fixed position refer to this element (for sausage bar) */
+  /* required to have fixed position refer to this element (for scrolllinks bar) */
   transform: rotateY(0deg);
 }
 #info {
@@ -441,7 +444,7 @@ row {
 }
 .flipContainer {
   width: 100%;
-  height: calc(100% - 32px);
+  height: calc(100% - 32px - 15px);
 }
 .front,
 .back {
@@ -527,6 +530,7 @@ row {
 .panel.left {
   width: 15em;
   min-width: 15em;
+  overflow: scroll;
   position: relative;
 }
 .panel.left > div {
@@ -645,9 +649,9 @@ row {
 .actionBar {
   position: absolute;
   top: -1px;
-  right: -22px;
+  right: -19px;
   padding: 0px 2px;
-  width: 20px;
+  width: 18px;
   height: 18px;
   line-height: 12px;
   background-color: rgba(255, 255, 255, 0.7);
