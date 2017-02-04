@@ -564,7 +564,7 @@ row {
 .dropdown-hover:hover .dropdown-menu {
   display: initial;
 }
-.mosaicGraph:hover .hoverMenu.widget {
+.graphViewer:hover .hoverMenu.widget {
   display: block;
 }
 /* Icon definitions
@@ -607,6 +607,9 @@ row {
 }
 .annotationLayer .addLink:hover {
   border-color: inherit;
+}
+.graphContainer {
+  text-align: initial;
 }
 .pdfViewer {
   /* re-align text overlay with pdf */
@@ -789,6 +792,9 @@ body {
   color: #ffffff;
 }
 /* Space out content a bit */
+.app-container {
+  height: calc(100% - 166px);
+}
 .container {
   width: 100%;
 }
