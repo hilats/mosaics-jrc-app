@@ -132,6 +132,9 @@
                         FRAGVIZ.UTILS.proxyUrl = '/proxy';
                     }
 
+                    if (serverConfig.basemaps)
+                        FRAGVIZ.VIEWERS.defaultBasemaps = serverConfig.basemaps
+
                     // resolve AppState as done
                     // TODO there must be a better place to do this
                     AppState.status.resolve(true)
