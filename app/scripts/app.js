@@ -82,6 +82,14 @@
                     templateUrl: 'views/sparql.html',
                     controller: 'SparqlCtrl'
                 })
+                .state('doc', {
+                    url: '/doc',
+                    templateUrl: 'views/doc.html'
+                })
+                .state('about', {
+                    url: '/about',
+                    templateUrl: 'views/about.html'
+                })
 
             authProvider = $authProvider
         })

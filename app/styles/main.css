@@ -269,6 +269,12 @@ row {
   display: table-row;
   height: 100%;
 }
+.glyphicon-json {
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/icons/json.svg);
+  background-size: cover;
+}
 .search_results {
   margin-top: 1em;
 }
@@ -601,6 +607,7 @@ row {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: absolute !important;
 }
 .annotationLayer .addLink:before {
   content: "\e081";
@@ -788,8 +795,18 @@ body {
   top: 110px;
   right: 20px;
 }
-.header .menu_header > ul > li > a {
+.header .menu_header .nav > li.open > a {
+  background-color: #074a8b;
+  border-color: #337ab7;
+}
+.header .menu_header .nav > li.btn-group:hover {
+  background-color: #074a8b;
+}
+.header .menu_header .nav > li > a {
   color: #ffffff;
+}
+.header .menu_header .nav > li > a:hover {
+  background-color: #074a8b;
 }
 /* Space out content a bit */
 .app-container {
