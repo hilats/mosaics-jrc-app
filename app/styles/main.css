@@ -249,6 +249,7 @@
 @media (max-width: 767px) {
 }
 .app-container {
+  padding-top: 10px;
   display: table;
   height: calc(100% - 70px - 10px);
 }
