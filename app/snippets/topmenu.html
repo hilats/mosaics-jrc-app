@@ -87,8 +87,11 @@
 
                 <li ng-controller="LoginCtrl as loginCtrl" class="loginMenu">
                     <div ng-if="currentUser && currentUser.authenticated" class="btn-group">
-                        <button type="button" class="btn btn-danger" ui-sref="myprofile">{{currentUser.name}}</button>
-                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button type="button" class="btn btn-primary" ui-sref="myprofile">
+                            <img class="profile_image" src="{{currentUser.details.user.pictureUrl}}" />
+                            <span style="margin: 0px 4px">{{currentUser.details.user.displayName}}</span>
+                        </button>
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="caret"></span>
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
@@ -97,8 +100,8 @@
                         </ul>
                     </div>
                     <div ng-if="!(currentUser && currentUser.authenticated)" class="btn-group">
-                        <button type="button" class="btn btn-danger">Log in</button>
-                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button type="button" class="btn btn-primary">Log in</button>
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="caret"></span>
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
