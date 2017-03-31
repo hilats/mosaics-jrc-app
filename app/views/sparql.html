@@ -1,8 +1,21 @@
 <div >
 
     <div style="position:relative">
-    <button class="btn btn-primary" style="float:right; margin-right:1em; margin-top: 1em" ng-click="sendQuery()">query</button>
-    <ui-codemirror id="sparqlEditor" ui-codemirror-opts="editorOptions" ng-model="query"></ui-codemirror>
+        <div style="float:right; margin-right:1em; margin-top: 1em">
+            <div class="btn-group" style="margin-bottom: 10px; width: 100%">
+                <button type="button" class="btn btn-primary">Sample queries</button>
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" style="right: 0; left: inherit">
+                    <li ng-repeat="(label,url) in sampleQueries"><a ng-click="loadQuery(url)">{{label}}</a></li>
+                </ul>
+            </div><br/>
+            <button class="btn btn-primary" style="margin-bottom: 10px; width: 100%" ng-click="sendQuery()">query</button>
+        </div>
+
+        <ui-codemirror id="sparqlEditor" ui-codemirror-opts="editorOptions" ng-model="query"></ui-codemirror>
     </div>
 
     <div style="position:relative">
