@@ -74,6 +74,18 @@
                     </ul>
                 </li>
 
+                <li class="btn-group" ng-if="currentUser && currentUser.authenticated && currentUser.details.user.roles.indexOf('admin')>=0">
+                    <a class="btn">Admin</a>
+                    <a  class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a ui-sref="admin.users">Users</a></li>
+                        <li><a ui-sref="admin.config">Config</a></li>
+                    </ul>
+                </li>
+
                 <li class="btn-group">
                     <a class="btn" ui-sref="about">About</a>
                     <a class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -19,6 +19,7 @@
             'mosaicsSearchModule',
             'mosaicsProfileModule',
             'searchDropdownModule',
+            'mosaicsAdminModule',
             'ngAnimate',
             'ngCookies',
             'ngResource',
