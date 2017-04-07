@@ -248,6 +248,10 @@
 }
 @media (max-width: 767px) {
 }
+.profile_image {
+  width: 20px;
+  float: left;
+}
 .app-container {
   padding-top: 10px;
   display: table;
@@ -261,6 +265,11 @@
       height: 0px;
     }
     */
+}
+.app-container > .appErrorList {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 cell {
   display: table-cell;
@@ -632,18 +641,45 @@ row {
 .pdfViewer .textLayer {
   top: -4px;
 }
-.olControlLayerSwitcher {
-  bottom: 0px;
-}
 .olControlLayerSwitcher .layersDiv {
-  height: 100%;
+  max-height: calc(100% - 20px);
   white-space: nowrap;
   overflow: auto;
 }
+.olControlLayerSwitcher .basemapSelector {
+  background-color: #5180a4;
+}
+.olControlLayerSwitcher .zoomToExtentIcon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: right;
+  padding-top: 2px;
+  color: transparent;
+  display: none;
+}
+.olControlLayerSwitcher .zoomToExtentIcon:before {
+  content: "\e140";
+}
+.olControlLayerSwitcher .zoomToExtentIcon:before {
+  color: white;
+}
+.olControlLayerSwitcher .dataLayersDiv {
+  text-align: left;
+}
+.olControlLayerSwitcher .dataLayersDiv :hover > .zoomToExtentIcon {
+  display: inline-block;
+}
 .action {
-  opacity: 0.6;
+  opacity: 0.8;
   text-decoration: none !important;
-  color: #2a6496;
+  color: white;
 }
 .action:hover {
   opacity: 1;
@@ -659,13 +695,10 @@ row {
 }
 .actionBar {
   position: absolute;
-  top: -1px;
-  right: -19px;
-  padding: 0px 2px;
-  width: 18px;
-  height: 18px;
+  top: -24px;
+  right: -1px;
   line-height: 12px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
   white-space: nowrap;
   text-align: right;
@@ -673,36 +706,35 @@ row {
   border-radius: 2px;
   transition: width 0.3s, height 0.3s;
 }
+.actionBar > div {
+  display: inline-block;
+  margin: 4px 4px;
+}
 .actionBar .action {
   vertical-align: bottom;
 }
 .actionBar .action-label {
   font-size: 70%;
   vertical-align: bottom;
+  display: none;
 }
-.actionBar .shrinkable {
-  position: absolute;
-  right: 0px;
-  top: 0px;
+.actionBar.shrinkable > :not(:first-child) {
+  display: none;
 }
 .actionBar .onhover {
   display: none;
 }
-.actionBar:hover {
-  width: auto;
-  height: auto;
-  background-color: #ffffff;
-}
-.actionBar:hover .shrinkable {
-  position: relative;
+.actionBar:hover.shrinkable > :not(:first-child) {
+  display: inherit;
 }
 .actionBar:hover .onhover {
   display: inherit;
 }
-.htmlAnnot .actionBar {
+.annot .actionBar {
   display: none;
 }
-.htmlAnnot:hover .actionBar {
+.annot:hover .actionBar,
+.annot.olPopup .actionBar {
   display: block;
 }
 .autocomplete-suggestions {

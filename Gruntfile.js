@@ -97,7 +97,7 @@ module.exports = function (grunt) {
       ngtemplates: {
           'mosaicsControllers': {
               cwd: '<%= yeoman.app %>/',
-              src: 'views/*.html',
+              src: 'views/**/*.html',
               dest: '<%= yeoman.app %>/templates/mosaics.ui.tpls.js',
               options: {
 
@@ -127,7 +127,7 @@ module.exports = function (grunt) {
     // The actual grunt server settings
     connect: {
       options: {
-        port: 9010,
+        port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
         livereload: 35739
@@ -184,7 +184,7 @@ module.exports = function (grunt) {
               {
                   context: '/proxy',
                   host: 'localhost',
-                  port: 8081,
+                  port: 8080,
                   https: false,
                   xforward: false
               }
