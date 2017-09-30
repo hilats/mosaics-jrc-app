@@ -2,7 +2,7 @@
   "name": "mosaics-jrc-app",
   "version": "0.1.0",
   "dependencies": {
-    "ng-mosaics": "https://bitbucket.org/highlatitudes/mosaics-app.git"
+    "ng-mosaics": "https://bitbucket.org/highlatitudes/mosaics-app.git#ol4"
   },
     "ignore": [
         ".gitignore",
