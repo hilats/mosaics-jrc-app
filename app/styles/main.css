@@ -255,7 +255,7 @@
 .app-container {
   padding-top: 10px;
   display: table;
-  height: calc(100% - 70px - 10px);
+  height: calc(100% - 10px);
 }
 .app-container > div {
   display: table-row;
@@ -280,8 +280,8 @@ row {
   height: 100%;
 }
 .glyphicon-json {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   background-image: url(../images/icons/json.svg);
   background-size: cover;
 }
@@ -602,7 +602,8 @@ row {
   display: inline-block;
   background-color: #2a6496;
 }
-.annotationLayer .addLink {
+.annotationLayer .addLink,
+.annotationContainer .addLink {
   color: #2a6496;
   background-color: white;
   border: 1px solid transparent;
@@ -619,10 +620,12 @@ row {
   -moz-osx-font-smoothing: grayscale;
   position: absolute !important;
 }
-.annotationLayer .addLink:before {
+.annotationLayer .addLink:before,
+.annotationContainer .addLink:before {
   content: "\e081";
 }
-.annotationLayer .addLink:hover {
+.annotationLayer .addLink:hover,
+.annotationContainer .addLink:hover {
   border-color: inherit;
 }
 .graphContainer {
@@ -676,14 +679,6 @@ row {
 .olControlLayerSwitcher .dataLayersDiv :hover > .zoomToExtentIcon {
   display: inline-block;
 }
-.action {
-  opacity: 0.8;
-  text-decoration: none !important;
-  color: white;
-}
-.action:hover {
-  opacity: 1;
-}
 .editable > input,
 .editable > input[disabled] {
   cursor: context-menu;
@@ -692,6 +687,20 @@ row {
 .editable.edited > input {
   border-color: initial;
   cursor: initial;
+}
+.action {
+  opacity: 0.8;
+  text-decoration: none !important;
+  color: #2a6496;
+}
+.action:hover {
+  opacity: 1;
+}
+.mosaic-action-bar {
+  float: right;
+}
+.mosaic-action-bar > * {
+  vertical-align: top;
 }
 .actionBar {
   position: absolute;
@@ -711,6 +720,7 @@ row {
   margin: 4px 4px;
 }
 .actionBar .action {
+  color: white;
   vertical-align: bottom;
 }
 .actionBar .action-label {
@@ -734,7 +744,8 @@ row {
   display: none;
 }
 .annot:hover .actionBar,
-.annot.olPopup .actionBar {
+.annot.olPopup .actionBar,
+.annot.annotationContainer .actionBar {
   display: block;
 }
 .autocomplete-suggestions {
@@ -812,12 +823,14 @@ row {
     box-shadow: 0 5px 6px rgba(10, 10, 10, 0.4);
   }
 }
-html,
-body {
+html {
   height: 100%;
 }
 .panel.slidein .header_padder {
   height: 38px;
+}
+.header ul.nav {
+  margin-top: 2px;
 }
 .header .loginMenu .dropdown-menu {
   left: initial;
@@ -842,11 +855,19 @@ body {
   background-color: #074a8b;
 }
 /* Space out content a bit */
+body {
+  height: calc(100% - 160px);
+}
 .app-container {
-  height: calc(100% - 166px);
+  margin-top: 160px;
 }
 .container {
   width: 100%;
+}
+.container.header {
+  z-index: 100;
+  position: fixed;
+  top: 0px;
 }
 .header,
 .marketing,

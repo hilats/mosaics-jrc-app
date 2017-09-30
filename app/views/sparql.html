@@ -20,9 +20,9 @@
 
     <div style="position:relative">
         <div class="btn-group" style="position:absolute; right:1em; top: 1em; z-index: 3">
-            <label class="btn btn-primary" ng-model="format" btn-radio="'rdf'">RDF</label>
-            <label class="btn btn-primary" ng-model="format" btn-radio="'ttl'">Turtle</label>
-            <label class="btn btn-primary" ng-model="format" btn-radio="'jsonld'">JSON-LD</label>
+            <label class="btn btn-primary" ng-model="format" uib-btn-radio="'rdf'">RDF</label>
+            <label class="btn btn-primary" ng-model="format" uib-btn-radio="'ttl'">Turtle</label>
+            <label class="btn btn-primary" ng-model="format" uib-btn-radio="'jsonld'">JSON-LD</label>
         </div>
         <ui-codemirror id="resultEditor" ui-codemirror-opts="editorOptions" ng-model="result"></ui-codemirror>
     </div>

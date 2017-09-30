@@ -16,7 +16,12 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/codemirror/lib/codemirror.css" />
     <link rel="stylesheet" href="bower_components/video.js/dist/video-js/video-js.css" />
+    <link rel="stylesheet" href="bower_components/ol-helpers/ol-helpers.css" />
+    <link rel="stylesheet" href="bower_components/datatables.net-dt/css/jquery.dataTables.css" />
     <link rel="stylesheet" href="bower_components/fragmentsviz/app/styles/fragmentsviz.css" />
+    <link rel="stylesheet" href="bower_components/fragmentsviz/app/styles/include.css" />
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/ng-mosaics/app/styles/main.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -50,13 +55,7 @@
   </head>
   <body ng-app="mosaicsJrcApp">
 
-  <div style="height:100%">
-      <top-menu class="container"></top-menu>
-
-      <div class="app-container container">
-          <div ui-view=""></div>
-      </div>
-  </div>
+    <div ui-view="" style="height:100%"></div>
 
     <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
@@ -69,6 +68,7 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/json3/lib/json3.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
@@ -78,30 +78,33 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="bower_components/satellizer/satellizer.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/codemirror/lib/codemirror.js"></script>
     <script src="bower_components/angular-ui-codemirror/ui-codemirror.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/proj4/dist/proj4.js"></script>
     <script src="bower_components/MediaFragmentsURI/mediafragments.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
-    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
     <script src="bower_components/video.js/dist/video-js/video.js"></script>
     <script src="bower_components/videojs-youtube/dist/vjs.youtube.js"></script>
     <script src="bower_components/d3/d3.js"></script>
-    <script src="bower_components/openlayers2/OpenLayers.js"></script>
-    <script src="bower_components/ol-helpers/EsriGeoJSON.js"></script>
+    <script src="bower_components/fetch/fetch.js"></script>
+    <script src="bower_components/openlayers/ol-debug.js"></script>
     <script src="bower_components/ol-helpers/ol-helpers.js"></script>
+    <script src="bower_components/ol-helpers/ol-layer-switcher.js"></script>
     <script src="bower_components/videojs-vimeo/vjs.vimeo.js"></script>
     <script src="bower_components/pdfjs-dist/build/pdf.js"></script>
     <script src="bower_components/pdfjs-dist/build/pdf.worker.js"></script>
-    <script src="bower_components/devbridge-autocomplete/dist/jquery.autocomplete.js"></script>
-    <script src="bower_components/cytoscape/dist/cytoscape.min.js"></script>
-    <script src="bower_components/fragmentsviz/app/scripts/jquery.utils.js"></script>
+    <script src="bower_components/papaparse/papaparse.js"></script>
+    <script src="bower_components/datatables.net/js/jquery.dataTables.js"></script>
     <script src="bower_components/fragmentsviz/app/scripts/d3graphs.js"></script>
     <script src="bower_components/fragmentsviz/app/scripts/utils.js"></script>
     <script src="bower_components/fragmentsviz/app/scripts/frag-codecs.js"></script>
+    <script src="bower_components/fragmentsviz/app/scripts/jquery.utils.js"></script>
     <script src="bower_components/fragmentsviz/app/scripts/viewers.js"></script>
+    <script src="bower_components/satellizer/satellizer.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/devbridge-autocomplete/dist/jquery.autocomplete.js"></script>
+    <script src="bower_components/cytoscape/dist/cytoscape.js"></script>
     <script src="bower_components/ng-mosaics/app/scripts/mosaics-app.js"></script>
     <script src="bower_components/ng-mosaics/app/scripts/services/mosaics.js"></script>
     <script src="bower_components/ng-mosaics/app/scripts/modules/preview.js"></script>

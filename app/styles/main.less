@@ -5,7 +5,7 @@
 
 @darkblue : #074a8b;
 
-html, body {
+html {
   height: 100%;
 }
 
@@ -16,6 +16,10 @@ html, body {
 }
 
 .header {
+
+  ul.nav {
+    margin-top: 2px;
+  }
 
   .loginMenu .dropdown-menu {
     left: initial;
@@ -52,15 +56,21 @@ html, body {
 
 /* Space out content a bit */
 body {
-
+  height:~"calc(100% - 160px)"
 }
 
 .app-container {
-  height: ~"calc(100% - 166px)";
+  margin-top: 160px;
 }
 
 .container {
   width: 100%;
+}
+
+.container.header {
+  z-index: 100;
+  position: fixed;
+  top: 0px;
 }
 
 .header,

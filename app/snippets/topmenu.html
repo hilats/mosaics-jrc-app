@@ -61,44 +61,45 @@
                 <li><a ng-href="#/about">About</a></li>
                 </li>
                 -->
+                            <li>
+                <a ui-sref="app.preview" class="btn">Preview</a>
+            </li>
                 <li class="btn-group">
-                    <a class="btn" ui-sref="search">Search</a>
+                    <a class="btn" ui-sref="app.search">Search</a>
                     <a ng-if="currentUser && currentUser.authenticated" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="caret"></span>
                         <span class="sr-only">Toggle Dropdown</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a ui-sref="mosaics.query({query:'mine'})">My Mosaics</a></li>
-                        <li><a ui-sref="mosaics.all">All Mosaics</a></li>
-                        <li><a ui-sref="sparql">Sparql</a></li>
+                        <!--<li><a ui-sref="app.mosaics.query({query:'mine'})">My Mosaics</a></li>-->
+                        <li><a ui-sref="app.mosaics.all">All Mosaics</a></li>
+                        <li><a ui-sref="app.sparql">Sparql</a></li>
                     </ul>
                 </li>
-            <li class="btn-group" ng-if="currentUser && currentUser.authenticated && currentUser.principal.user.roles.indexOf('admin')>=0">
-                    <a class="btn">Admin</a>
-                    <a  class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="caret"></span>
-                        <span class="sr-only">Toggle Dropdown</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a ui-sref="admin.users">Users</a></li>
-                        <li><a ui-sref="admin.config">Config</a></li>
-                    </ul>
-                </li>
-
                 <li class="btn-group">
-                    <a class="btn" ui-sref="about">About</a>
+                    <a class="btn" ui-sref="app.about">About</a>
                     <a class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="caret"></span>
                         <span class="sr-only">Toggle Dropdown</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a ui-sref="doc">Documentation</a></li>
+                        <li><a ui-sref="app.doc">Documentation</a></li>
+                    </ul>
+                </li>
+                <li class="btn-group" ng-if="currentUserHasRole('admin')">
+                    <a  class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="glyphicon glyphicon-cog"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a ui-sref="app.admin.server">Server</a></li>
+                        <li><a ui-sref="app.admin.users">Users</a></li>
+                        <li><a ui-sref="app.admin.config">Config</a></li>
                     </ul>
                 </li>
 
                 <li ng-controller="LoginCtrl as loginCtrl" class="loginMenu">
                     <div ng-if="currentUser && currentUser.authenticated" class="btn-group">
-                        <button type="button" class="btn btn-primary" ui-sref="myprofile">
+                        <button type="button" class="btn btn-primary" ui-sref="app.myprofile">
                         <img class="profile_image" src="{{currentUser.principal.user.pictureUrl}}" />
                         <span style="margin: 0px 4px">{{currentUser.principal.user.displayName}}</span>
                         </button>
