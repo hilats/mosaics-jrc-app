@@ -16,10 +16,11 @@
     "grunt-contrib-copy": "^0.5.0",
     "grunt-contrib-cssmin": "^0.9.0",
     "grunt-contrib-htmlmin": "^0.3.0",
-    "grunt-contrib-imagemin": "^0.7.0",
+    "grunt-contrib-imagemin": "^1.0.0",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^0.6.1",
+      "grunt-contrib-less": "^1.4.0",
     "grunt-filerev": "^0.2.1",
     "grunt-google-cdn": "^0.4.0",
     "grunt-newer": "^0.7.0",
@@ -34,11 +35,10 @@
     "grunt-connect-proxy": "^0.2.0",
     "karma-jasmine": "^0.1.5",
     "karma-phantomjs-launcher": "^0.1.4",
-      "bower": "~1.7",
-      "grunt-bower-task": "yatskevich/grunt-bower-task#devel"  ,
       "grunt-angular-templates": "^0.5.9",
       "grunt-header": "^1.0.0",
-      "grunt-contrib-less": "^1.4.0"
+      "bower": "~1.7",
+      "grunt-bower-task": "yatskevich/grunt-bower-task#devel",
   },
   "engines": {
     "node": ">=0.10.0"
