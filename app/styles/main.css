@@ -230,6 +230,62 @@
   display: inline-block;
   background-image: url("../images/icons/gis-resources-sprite-icons.png");
 }
+.social-icon {
+  background: url("../images/icons/social-media-icons.jpg") no-repeat 0 0;
+  width: 26px;
+  height: 27px;
+  background-size: 600%;
+  background-position: 0px 0px;
+  vertical-align: middle;
+  display: inline-block;
+}
+/*
+width: 110px;
+    height: 110px;
+    background-position: -415px -292px;
+*/
+/*
+    width: 25px;
+    height: 25px;
+    background-position: -75px -53px;
+    background-size: 600%;
+*/
+.social-icon[data-network=twitter] {
+  background: url("../images/icons/social-media-icons.jpg") no-repeat 0 0;
+  width: 26px;
+  height: 27px;
+  background-size: 600%;
+  background-position: -78px -54px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.social-icon[data-network=google] {
+  background: url("../images/icons/social-media-icons.jpg") no-repeat 0 0;
+  width: 26px;
+  height: 27px;
+  background-size: 600%;
+  background-position: -104px 0px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.social-icon[data-network=linkedin] {
+  background: url("../images/icons/social-media-icons.jpg") no-repeat 0 0;
+  width: 26px;
+  height: 27px;
+  background-size: 600%;
+  background-position: -104px -27px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.social-icon[data-network=facebook] {
+  background: url("../images/icons/social-media-icons.jpg") no-repeat 0 0;
+  width: 26px;
+  height: 27px;
+  background-size: 600%;
+  background-position: -52px -54px;
+  vertical-align: middle;
+  display: inline-block;
+}
 @media screen and (max-width: 767px) {
 }
 @media (min-width: 768px) {
@@ -255,6 +311,7 @@
 .app-container {
   padding-top: 10px;
   display: table;
+  table-layout: fixed;
   height: calc(100% - 10px);
 }
 .app-container > div {
@@ -411,6 +468,20 @@ row {
   height: 100%;
   /* required to have fixed position refer to this element (for scrolllinks bar) */
   transform: rotateY(0deg);
+}
+.fragment-thumbnail {
+  height: 34px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.fragment-thumbnail:hover {
+  height: initial;
+  position: absolute;
+  /* padding: 1px; */
+  background: white;
+  /* border: 1px solid grey; */
+  z-index: 100;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 5px 0px;
+  border-radius: 5px;
 }
 #info {
   position: absolute;
@@ -644,6 +715,26 @@ row {
 .pdfViewer .textLayer {
   top: -4px;
 }
+.geoViewerContainer .ol-feature-details {
+  top: 35px;
+  max-height: calc(100% - 45px);
+}
+.geoViewerContainer .ol-feature-details .actions {
+  float: right;
+}
+.geoViewerContainer .ol-feature-details .actions .actionBar {
+  top: -1px;
+}
+.geoViewerContainer .infoContainer .popupContent .actionBar {
+  top: -2px;
+  right: -3px;
+  position: relative;
+  display: inline-block;
+  float: right;
+}
+.geoViewerContainer .infoContainer .popupContent .details {
+  display: inline-block;
+}
 .olControlLayerSwitcher .layersDiv {
   max-height: calc(100% - 20px);
   white-space: nowrap;
@@ -865,7 +956,7 @@ body {
   width: 100%;
 }
 .container.header {
-  z-index: 100;
+  z-index: 200;
   position: fixed;
   top: 0px;
 }

@@ -84,8 +84,14 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a ui-sref="app.doc">Documentation</a></li>
+                        <li><a title="Bookmarklet"
+                               href="javascript:{{bookmarkletCode}}">
+                            {{serverConfig.webbappTitle || 'View in Mosaics'}}
+                        </a>
+                        </li>
                     </ul>
                 </li>
+
                 <li class="btn-group" ng-if="currentUserHasRole('admin')">
                     <a  class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="glyphicon glyphicon-cog"></i>
@@ -100,7 +106,7 @@
                 <li ng-controller="LoginCtrl as loginCtrl" class="loginMenu">
                     <div ng-if="currentUser && currentUser.authenticated" class="btn-group">
                         <button type="button" class="btn btn-primary" ui-sref="app.myprofile">
-                        <img class="profile_image" src="{{currentUser.principal.user.pictureUrl}}" />
+                        <img class="profile_image" ng-src="{{currentUser.principal.user.pictureUrl}}" />
                         <span style="margin: 0px 4px">{{currentUser.principal.user.displayName}}</span>
                         </button>
                         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

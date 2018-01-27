@@ -187,6 +187,13 @@ module.exports = function (grunt) {
                   port: 8080,
                   https: false,
                   xforward: false
+              },
+              {
+                  context: '/thumbnails',
+                  host: 'localhost',
+                  port: 8080,
+                  https: false,
+                  xforward: false
               }
           ]
     },
@@ -427,7 +434,7 @@ module.exports = function (grunt) {
       mintlibs: {
             expand: true,
             cwd: 'bower_components',
-            src: ['pdfjs-dist/**', 'openlayers2/**'],
+            src: ['pdfjs-dist/**', 'openlayers/**'],
             dest: '.tmp/libs'
       },
         fragviz_include: {
@@ -447,6 +454,12 @@ module.exports = function (grunt) {
             cwd: 'bower_components/ng-mosaics/app/images',
             src: ['**'],
             dest: '.tmp/images'
+        },
+        mosaics_bookmarklet: {
+            expand: true,
+            cwd: 'bower_components/ng-mosaics/app/bookmarklet',
+            src: ['**'],
+            dest: '.tmp/bookmarklet'
         }
     },
 
@@ -457,14 +470,16 @@ module.exports = function (grunt) {
         'copy:mintlibs',
         'copy:fragviz_include',
         'copy:mosaics_webfonts',
-          'copy:mosaics_images'
+        'copy:mosaics_images',
+        'copy:mosaics_bookmarklet'
       ],
       test: [
         'copy:styles',
         'copy:mintlibs',
         'copy:fragviz_include',
           'copy:mosaics_webfonts',
-          'copy:mosaics_images'
+          'copy:mosaics_images',
+          'copy:mosaics_bookmarklet'
       ],
       dist: [
         'copy:styles',
@@ -472,6 +487,7 @@ module.exports = function (grunt) {
         'copy:fragviz_include',
           'copy:mosaics_webfonts',
           'copy:mosaics_images',
+          'copy:mosaics_bookmarklet',
         'imagemin',
         'svgmin'
       ]
